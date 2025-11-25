@@ -6,39 +6,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  * https://element-plus.org/zh-CN/component/overview
  */
 return [
-    'WelCome' => [
-        'title' => '欢迎使用',
-        'html' => [
-            [
-                // 'Content' => '自定义输出HTML内容',
-                'content' => '
-                    <el-result
-                        icon="success"
-                        title="米饭的自用主题~"
-                        sub-title="The Intuitive Typecho Theme Develop Framework."
-                    >
-                        <template #extra>
-                        <el-button type="primary" :icon="Check">确认</el-button>
-                            <el-button :icon="Close">取消</el-button>
-                        </template>
-                    </el-result>
-                    <el-row justify="center">
-                        <el-space wrap justify="center">
-                            <a href="https://github.com/YuiNijika/TTDF" target="_blank">
-                                <el-button :icon="Link" type="primary">GitHub</el-button>
-                            </a>
-                            <a href="https://space.bilibili.com/435502585" target="_blank">
-                                <el-button :icon="Link" type="danger">BiliBili</el-button>
-                            </a>
-                            <a href="https://github.com/YuiNijika/TTDF/releases" target="_blank">
-                                <el-button :icon="Download" type="warning">Releases</el-button>
-                            </a>
-                        </el-space>
-                    </el-row>
-                '
-            ],
-        ]
-    ],
     'Rice-Options' => [
         'title' => '主题设置',
         'fields' => [
