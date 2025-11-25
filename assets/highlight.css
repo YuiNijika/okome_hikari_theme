@@ -1,0 +1,56 @@
+.hljs {
+  background: transparent;
+  color: var(--color-neutral-content);
+  display: block;
+  overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: color-mix(in oklab, var(--color-neutral-content) 65%, #000);
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name {
+  color: var(--color-info);
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attr,
+.hljs-params {
+  color: var(--color-warning);
+}
+
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet {
+  color: var(--color-info);
+}
+
+.hljs-section,
+.hljs-meta {
+  color: var(--color-accent);
+}
+
+.hljs-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
