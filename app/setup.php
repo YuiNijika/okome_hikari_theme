@@ -12,7 +12,7 @@ return [
             [
                 'type' => 'Text',
                 'name' => 'sideBarImg',
-                'value' => '#',
+                'value' => get_assets('Emoji/bilibili/10001.png', false, false),
                 'label' => '侧边栏图片',
                 'description' => '侧边栏图片'
             ],
@@ -40,24 +40,10 @@ return [
             [
                 'type' => 'Text',
                 'name' => 'loadingImg',
-                'value' => '#',
+                'value' => get_assets('Emoji/bilibili/10002.png', false, false),
                 'label' => '加载背景图',
                 'description' => '设置图像加载的占位图'
-            ],
-            [
-                'type' => 'Text',
-                'name' => 'MetingApiUrl',
-                'value' => '#',
-                'label' => 'MetingApiUrl',
-                'description' => '设置MetingApiUrl'
-            ],
-            [
-                'type' => 'Textarea',
-                'name' => 'pjax_Content',
-                'value' => '',
-                'label' => 'PJAX回调函数',
-                'description' => 'PJAX回调函数，用于在PJAX加载完成后执行'
-            ],
+            ]
         ]
     ],
     'Color-Options' => [
@@ -150,5 +136,23 @@ return [
             ],
         ]
     ],
-
+    'Other-Options' => [
+        'title' => '其他设置',
+        'fields' => [
+            [
+                'type' => 'Text',
+                'name' => 'MetingApiUrl',
+                'value' => '#',
+                'label' => 'MetingApiUrl',
+                'description' => '设置MetingApiUrl'
+            ],
+            [
+                'type' => 'Textarea',
+                'name' => 'pjax_Content',
+                'value' => '',
+                'label' => 'PJAX回调函数',
+                'description' => 'PJAX回调函数，用于在PJAX加载完成后执行'
+            ],
+        ]
+    ]
 ];
