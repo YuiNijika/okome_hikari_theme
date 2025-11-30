@@ -11,47 +11,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <link rel="stylesheet" href="<?php get_assets('tailwindcss.css') ?>">
     <link rel="stylesheet" href="<?php get_assets('app.css') ?>">
     <link rel="stylesheet" href="<?php get_assets('OwO.min.css') ?>">
-    <style>
-        :root {
-            --root-bg: var(--color-base-200);
-        }
 
-        html.is-changing .transition-fade {
-            transition: opacity 0.25s;
-            opacity: 1;
-        }
-
-        html.is-animating .transition-fade {
-            opacity: 0;
-        }
-
-        #swup-loader {
-            position: fixed;
-            inset: 0;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0);
-            backdrop-filter: blur(2px);
-            -webkit-backdrop-filter: blur(2px);
-            z-index: 9999;
-        }
-
-        #swup-loader img {
-            width: 96px;
-            height: 96px;
-            object-fit: contain;
-        }
-
-        html.is-animating #swup-loader,
-        html.is-changing #swup-loader {
-            display: flex;
-        }
-
-        .swup-progress-bar {
-            background-color: var(--color-primary);
-        }
-    </style>
     <script type="module" src="<?php get_assets('main.js') ?>"></script>
     <?php if (Get::Is('post')): ?>
         <link rel="stylesheet" href="<?php get_assets('highlight.css') ?>">
@@ -68,12 +28,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <link rel="stylesheet" href="<?php get_assets('APlayer.min.css') ?>">
     <script src="<?php get_assets('OwO.min.js') ?>"></script>
     <script src="<?php get_assets('APlayer.min.js') ?>"></script>
-    <style>
-        .medium-zoom-overlay,
-        .medium-zoom-image--opened {
-            z-index: 999;
-        }
-    </style>
+    <link rel="stylesheet" href="<?php get_assets('header.css') ?>">
     <script data-swup-ignore-script>
         function TypechoCommentUSE() {
             window.TypechoComment = window.TypechoComment = {
@@ -327,7 +282,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col items-stretch justify-start">
                 <header class="fixed top-4 sm:top-6 inset-x-0 z-30 mx-2">
-                    <div class="container shadow-sm mx-auto max-w-5xl px-4 py-4 flex items-center justify-start space-x-4 bg-base-100 rounded-box backdrop-filter" style="backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); background-color: color-mix(in oklab, var(--color-base-100) 80%, transparent);">
+                    <div class="container shadow-sm mx-auto max-w-5xl px-4 py-4 flex items-center justify-start space-x-4 bg-base-100 rounded-box backdrop-filter header-glass">
                         <label for="my-drawer-3" class="btn drawer-button">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -338,7 +293,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 </header>
             </div>
             <div class="drawer-side z-50">
-                <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay blur-sm z-40" style="backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);"></label>
+                <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay blur-sm z-40 overlay-glass"></label>
                 <ul class="menu min-h-full rounded-br-box rounded-tr-box bg-transparent z-50 sm:w-100 w-3/4 sm:mt-16 sm:ml-8">
                     <!-- Sidebar content here -->
                     <div class="flex flex-row space-x-4 w-full sm:h-28 h-30 ">
