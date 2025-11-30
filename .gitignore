@@ -1,6 +1,8 @@
 # Logs
 logs
 *.log
+.idea/
 .trae/
 .repomap/
 .virtualme/
+node_modules/
