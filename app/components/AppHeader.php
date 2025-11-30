@@ -355,7 +355,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     <div class="card bg-base-100 text-primary-100 w-full mt-4">
                         <div class="card-body">
                             <div class="flex flex-row  w-full h-6 items-end space-x-2 mb-2">
-                                <h3 class="text-primary-content font-semibold text-2xl">导航</h3>
+                                <h3 class=" font-semibold text-2xl">导航</h3>
                                 <!--h5 class="text-sm">Share the world</h5!-->
                             </div>
                             <li><a href="<?php get_site_url(); ?>">首页</a></li>
@@ -366,7 +366,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     <div class="card bg-secondary text-primary-content w-full mt-4">
                         <div class="card-body">
                             <div class="flex flex-row  w-full h-6 items-end space-x-2 mb-2">
-                                <h3 class="text-primary-content font-semibold text-2xl">分类</h3>
+                                <h3 class="font-semibold text-2xl">分类</h3>
                             </div>
 
                             <?php $this->widget('Widget_Metas_Category_List')
