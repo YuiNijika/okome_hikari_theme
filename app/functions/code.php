@@ -22,7 +22,7 @@ class OKOME
             return $commentStr;
         }
 
-        $EmojiJson = rtrim(get_site_url(false), '/') . '/okome-hikari-api/owo';
+        $EmojiJson = __DIR__ . '/../../assets/owo.json';
         $json = @file_get_contents($EmojiJson);
         if ($json === false) {
             return $commentStr;
@@ -253,8 +253,7 @@ class Editor
     public static function edit()
     {
 ?>
-    <script src="<?php get_assets('editor.js') ?>"></script>
+        <script src="<?php get_assets('editor.js') ?>"></script>
 <?php
     }
 }
-
