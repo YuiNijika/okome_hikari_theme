@@ -15,7 +15,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                                 </div>
                             <?php endif; ?>
                             <div class="card-body">
-                                <a class=" text-secondary-content text-xl card-title" href="<?php GetPost::Permalink(); ?>"><?php GetPost::Title(); ?></a>
+                                <a class=" text-xl card-title" href="<?php GetPost::Permalink(); ?>"><?php GetPost::Title(); ?></a>
                                 <p><?php GetPost::Excerpt(150, true); ?></p>
                             </div>
                         </a>
@@ -31,12 +31,12 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             ?>
             <div class="flex justify-between gap-2">
                 <?php if ($nowpage > 1): ?>
-                    <a class="btn btn-primary text-primary-content" href="<?php Get::PageLink('PrevPage', 'prev', true); ?>">上一页</a>
+                    <a class="btn btn-primary " href="<?php Get::PageLink('PrevPage', 'prev', true); ?>">上一页</a>
                 <?php else: ?>
                     <span></span>
                 <?php endif; ?>
                 <?php if ($nowpage < $totalPages): ?>
-                    <a class="btn btn-primary text-primary-content" href="<?php Get::PageLink('NextPage', 'next', true); ?>">下一页</a>
+                    <a class="btn btn-primary " href="<?php Get::PageLink('NextPage', 'next', true); ?>">下一页</a>
                 <?php else: ?>
                     <span></span>
                 <?php endif; ?>
