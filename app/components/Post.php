@@ -18,6 +18,19 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 
                 <div class="mt-6">
+                    <?php $aiSummary = get_fields('AISummary'); ?>
+                    <?php if ($aiSummary) : ?>
+                        <div class="bg-base-200 card p-4  mb-2 shadow-sm">
+                            <p class="flex flex-row items-center  gap-2">
+                                <span class="badge badge-xs badge"><?php Get::Options('ai_show_badge', true); ?></span>
+                                <title class="card-title">摘要</title>
+                            </p>
+                            <div class="bg-base-100 p-4 mt-2 card md:p-8">
+                                <p><?php echo GetPost::applyLazyloadToImages($aiSummary); ?></p>
+                            </div>
+                        </div>
+
+                    <?php endif; ?>
                     <?php
                     echo GetPost::Content(false);
                     ?>
@@ -32,6 +45,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </div>
 
     </div>
-    <div class="mt-4"></div>
+    <div class=" mt-4">
+    </div>
 
 </main>

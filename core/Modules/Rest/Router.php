@@ -7,6 +7,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 require_once 'Enums.php';
 require_once 'Core.php';
 require_once 'Controllers.php';
+require_once 'AIController.php';
 
 final class TTDF_API
 {
@@ -85,6 +86,7 @@ final class TTDF_API
                     : $this->handleComments(),
                 'attachments' => $this->handleAttachmentList(),
                 'ttdf' => $this->handleTtdf(),
+                'ai-summary' => $this->handleAISummary(),
                 default => $this->handleNotFound($endpoint),
             };
 
@@ -222,5 +224,11 @@ final class TTDF_API
     {
         $controller = new TTDFController($this->request, $this->response, $this->db, $this->formatter);
         return $controller->handle();
+    }
+
+    private function handleAISummary(): array
+    {
+        $controller = new AIController($this->request, $this->response, $this->db, $this->formatter);
+        return $controller->handleGenerate();
     }
 }
