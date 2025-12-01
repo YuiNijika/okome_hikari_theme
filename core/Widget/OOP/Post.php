@@ -586,7 +586,7 @@ class GetPost extends Typecho_Widget
         return self::outputValue($default, $echo);
     }
 
-    private static function applyLazyloadToImages($html)
+    static function applyLazyloadToImages($html)
     {
         $placeholder = Get::Options('loadingImg', false);
         return preg_replace_callback('/<img\b[^>]*>/i', function ($matches) use ($placeholder) {

@@ -92,7 +92,7 @@ function threadedComments($comments, $options)
                                     logo: 'OωO表情',
                                     container: document.getElementsByClassName('OwO')[0],
                                     target: document.getElementsByClassName('OwO-textarea')[0],
-                                    api: "<?php echo rtrim(get_site_url(false), '/') . '/okome-hikari-api/owo'; ?>",
+                                    api: "<?php get_assets('owo.json') ?>",
                                     position: 'down',
                                     width: '100%',
                                     maxHeight: '250px'

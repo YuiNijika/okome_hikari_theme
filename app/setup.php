@@ -154,5 +154,45 @@ return [
                 'description' => 'PJAX回调函数，用于在PJAX加载完成后执行'
             ],
         ]
+    ],
+    'AI-Options' => [
+        'title' => 'AI 设置',
+        'fields' => [
+            [
+                'type' => 'Text',
+                'name' => 'ai_show_badge',
+                'value' => 'AI',
+                'label' => '显示在摘要前面的徽章文本',
+                'description' => '显示在摘要前面的徽章文本'
+            ],
+            [
+                'type' => 'Text',
+                'name' => 'ai_api_endpoint',
+                'value' => 'https://api.openai.com/v1/chat/completions',
+                'label' => 'API Endpoint',
+                'description' => 'OpenAI 兼容的 API 地址'
+            ],
+            [
+                'type' => 'Text',
+                'name' => 'ai_api_key',
+                'value' => '',
+                'label' => 'API Key',
+                'description' => 'API 密钥'
+            ],
+            [
+                'type' => 'Text',
+                'name' => 'ai_model',
+                'value' => 'gpt-3.5-turbo',
+                'label' => '模型名称',
+                'description' => '使用的 AI 模型 (如 gpt-3.5-turbo, gpt-4)'
+            ],
+            [
+                'type' => 'Textarea',
+                'name' => 'ai_prompt_template',
+                'value' => '请为以下文章生成一个简短的摘要（200字以内）：\n\n标题：${title}\n\n内容：\n${content}',
+                'label' => '提示词模板',
+                'description' => '支持变量：${title} (标题), ${content} (内容)'
+            ]
+        ]
     ]
 ];
