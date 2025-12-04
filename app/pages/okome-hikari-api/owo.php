@@ -1,8 +1,9 @@
-<?php 
+<?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 header('Content-Type: application/json');
 
-function get_owo_json() {
+function get_owo_json()
+{
     return [
         "颜文字" => [
             "type" => "emoticon",

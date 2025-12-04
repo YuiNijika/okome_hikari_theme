@@ -35,8 +35,8 @@ return [
             'prefix' => 'https://cravatar.cn/avatar/', // Gravatar前缀
         ],
         'restapi' => [
-            'enabled' => false, // 是否启用REST API
-            'route' => 'ty-json', // REST API路由
+            'enabled' => true, // 是否启用REST API
+            'route' => 'hikari', // REST API路由
             'override_setting' => 'RESTAPI_Switch', // 主题设置项名称
             'token' => [
                 'enabled' => false, // 是否启用Token

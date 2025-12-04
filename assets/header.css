@@ -1,0 +1,55 @@
+:root {
+    --root-bg: var(--color-base-200);
+}
+
+html.is-changing .transition-fade {
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
+#swup-loader {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 9999;
+}
+
+#swup-loader img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+html.is-animating #swup-loader,
+html.is-changing #swup-loader {
+    display: flex;
+}
+
+.swup-progress-bar {
+    background-color: var(--color-primary);
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+    z-index: 999;
+}
+
+.header-glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: color-mix(in oklab, var(--color-base-100) 80%, transparent);
+}
+
+.overlay-glass {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
